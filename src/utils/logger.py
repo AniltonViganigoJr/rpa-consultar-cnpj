@@ -1,5 +1,5 @@
 """
-Módulo: exemplo_logger.py
+Módulo: logger.py
 Descrição: Este módulo configura e demonstra o uso do logger
 em Python, gravando mensagens no console e em arquivo.
 """
