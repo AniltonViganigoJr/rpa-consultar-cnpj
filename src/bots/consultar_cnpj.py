@@ -20,7 +20,7 @@ def executar(cnpj):
         if resposta.get('status','').upper() == 'OK':
             log.info('API - Status code: OK')
             return resposta
-        log.warning(f'API - Status code: {resposta.get('status')}')
+        log.warning('API - Não foi possível obter as informações da empresa')
         return None
     except Exception as e:
         log.exception(f'Exception Error: {e}')
