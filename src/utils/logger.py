@@ -6,6 +6,7 @@ em Python, gravando mensagens no console e em arquivo.
 
 import logging
 from pathlib import Path
+from datetime import datetime
 
 def setup_logger():
     """
@@ -20,7 +21,7 @@ def setup_logger():
     """
     log_dir = Path(__file__).resolve().parent.parent.parent / 'logs'
     log_dir.mkdir(exist_ok=True)
-    log_file = log_dir / 'execution.log'
+    log_file = log_dir / f'execution_{datetime.now().strftime("%d-%m-%Y_%H-%M-%S")}.log'
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s [%(levelname)s] %(message)s',
