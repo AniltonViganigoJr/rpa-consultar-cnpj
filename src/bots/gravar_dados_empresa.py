@@ -33,5 +33,5 @@ def gravar_dados_empresa(dados_empresa):
     
     #Inserir Dados no Relatório Excel
     with pd.ExcelWriter(excel_file_name, engine='openpyxl') as writer:
-        df.to_excel(writer, sheet_name=dados_empresa['nome'], index=False)
+        df.to_excel(writer, sheet_name=dados_empresa['nome'][:30],index=False)
         log.info('[Output] Dados inseridos no relatório com sucesso')
